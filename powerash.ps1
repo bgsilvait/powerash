@@ -13,8 +13,8 @@ Function choco{
         $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
         #Force refresh env vars at all new powershell sessions for all users.
         Add-Content -Path $PsHome\profile.ps1 -Value '$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")'
-        Add-Content -Path $PsHome\profile.ps1 -Value 'Remove-Item alias:curl' -erroraction 'ignore'
-        Add-Content -Path $PsHome\profile.ps1 -Value 'new-alias grep findstr' -erroraction 'ignore'
+        Add-Content -Path $PsHome\profile.ps1 -Value 'Remove-Item alias:curl -erroraction ignore'
+        Add-Content -Path $PsHome\profile.ps1 -Value 'new-alias grep findstr -erroraction ignore'
         choco install vim curl awscli -y
     }
     catch {
