@@ -26,6 +26,7 @@ Function aliases{
     try {
         Add-Content -Path $PsHome\profile.ps1 -Value 'Remove-Item alias:curl -erroraction ignore'
         Add-Content -Path $PsHome\profile.ps1 -Value 'new-alias grep findstr -erroraction ignore'
+        &$PSHOME\profile.ps1
         }
     catch {
         Write-Error "fail to set aliases"
