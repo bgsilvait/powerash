@@ -30,4 +30,5 @@ choco install vim curl awscli -y
 vim foo
 curl -I foo.bar
 aws s3 ls
+cat foo | grep bar
 ```
