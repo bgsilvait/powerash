@@ -21,6 +21,7 @@ iwr -o powerash.ps1 https://raw.githubusercontent.com/bgsilvait/powerash/master/
 .\powerash.ps1
 &$PSHOME\profile.ps1
 choco install vim curl awscli -y
+&$PSHOME\profile.ps1
 </powershell>
 ```
 
